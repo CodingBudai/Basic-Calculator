@@ -18,6 +18,8 @@ public class CalcModel {
 	public void setTempFirstValue(String txt){
 		if(this.dispIsEmpty == true)
 			this.tempFirstValue = txt;
+		if(this.tempFirstValue.startsWith("0"))
+			this.tempFirstValue = txt;
 		else
 			this.tempFirstValue += txt;
 	}
