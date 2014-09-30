@@ -9,7 +9,6 @@ public class CalcController {
 		this.theView = theView;
 		this.theModel = theModel;
 		
-		//this.theModel.setTempFirstValue(this.theView.getCurrentTxt());
 		this.theView.addListener(new CalcListener());
 	}
 	
