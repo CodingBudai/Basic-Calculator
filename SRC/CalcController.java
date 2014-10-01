@@ -115,6 +115,30 @@ public class CalcController {
 					theView.setDispText(theModel.getTempFirstValue());
 				}
 			}
+			if(e.getSource() == theView.getOptBtn0()){
+				theModel.ClearAll();
+				theView.setDispText(theModel.getTempFirstValue());
+			}
+			if(e.getSource() == theView.getOptBtn1()){
+				theModel.setDivOperation(true);
+				theView.setDispText(theModel.getTempFirstValue());
+			}
+			if(e.getSource() == theView.getOptBtn2()){
+				theModel.setMultiOperation(true);
+				theView.setDispText(theModel.getTempFirstValue());
+			}
+			if(e.getSource() == theView.getOptBtn3()){
+				theModel.setSubOperation(true);
+				theView.setDispText(theModel.getTempFirstValue());
+			}
+			if(e.getSource() == theView.getOptBtn4()){
+				theModel.setAddOperation(true);
+				theView.setDispText(theModel.getTempFirstValue());
+			}
+			if(e.getSource() == theView.getOptBtn5()){
+				theModel.EqualOperation();
+				theView.setDispText(theModel.getResult());
+			}
 		}
 	}
 } 
