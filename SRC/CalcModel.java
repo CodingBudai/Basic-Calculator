@@ -4,13 +4,13 @@ public class CalcModel {
 	private String result = "";
 	
 	private boolean add = false,
-			sub = false,
-			multi = false,
-			div = false;
+					sub = false,
+					multi = false,
+					div = false;
 	
 	private double	x = 0,
-			y = 0,
-			z = 0;
+					y = 0,
+					z = 0;
 	
 	public boolean dispIsEmpty(){
 		if(this.tempFirstValue.equals(""))
@@ -33,24 +33,36 @@ public class CalcModel {
 	}
 	
 	public void setAddOperation(boolean thisOperation){
+		this.sub = false;
+		this.multi = false;
+		this.div = false;
 		this.add = thisOperation;
 		this.x = Double.parseDouble(tempFirstValue);
 		this.tempFirstValue = "";
 	}
 	
 	public void setSubOperation(boolean thisOperation){
+		this.add = false;
+		this.multi = false;
+		this.div = false;
 		this.sub = thisOperation;
 		this.x = Double.parseDouble(tempFirstValue);
 		this.tempFirstValue = "";
 	}
 	
 	public void setMultiOperation(boolean thisOperation){
+		this.add = false;
+		this.sub = false;
+		this.div = false;
 		this.multi = thisOperation;
 		this.x = Double.parseDouble(tempFirstValue);
 		this.tempFirstValue = "";
 	}
 	
 	public void setDivOperation(boolean thisOperation){
+		this.add = false;
+		this.sub = false;
+		this.multi = false;
 		this.div = thisOperation;
 		this.x = Double.parseDouble(tempFirstValue);
 		this.tempFirstValue = "";
